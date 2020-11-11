@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common')
 
-const devConfig = merge(common, {
+module.exports = merge(common, {
     mode: 'development',
     devServer: {
         contentBase: './build',
@@ -27,5 +27,4 @@ const devConfig = merge(common, {
     devtool: 'source-map'
 })
 
-console.log('devConfig: ', devConfig)
 module.exports = devConfig
